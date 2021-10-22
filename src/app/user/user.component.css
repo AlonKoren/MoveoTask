@@ -1,0 +1,66 @@
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: black;
+  background-color: #EEEEEE;
+}
+
+.mat-column-picture {
+  border: 1px solid currentColor;
+  padding: 24px;
+  text-align: center;
+}
+
+.mat-column-full_name {
+  border: 1px solid currentColor;
+  padding: 24px;
+  text-align: center;
+}
+.mat-column-email {
+  border: 1px solid currentColor;
+  padding: 24px;
+  text-align: center;
+}
+.mat-column-gender {
+  border: 1px solid currentColor;
+  padding: 24px;
+  text-align: center;
+}
+.mat-column-age {
+  border: 1px solid currentColor;
+  padding: 24px;
+  text-align: center;
+}
+

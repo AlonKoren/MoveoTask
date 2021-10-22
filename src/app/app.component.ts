@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MoveoTask';
+  public title: string ='';
+
+  setTitle(title: string){
+    this.title= title;
+  }
+
+  onTitleChange(title: string) {
+    this.setTitle(title)
+  }
 }
