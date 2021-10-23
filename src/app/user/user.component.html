@@ -7,12 +7,12 @@
 
     <ng-container matColumnDef="picture">
       <th mat-header-cell *matHeaderCellDef> Picture </th>
-      <td mat-cell *matCellDef="let element"> <img src="{{element.picture}}" alt="picture" style="border-radius: 50%;"> </td>
+      <td mat-cell *matCellDef="let element"> <img src="{{element.picture.thumbnail}}" alt="picture" style="border-radius: 50%;"> </td>
     </ng-container>
 
     <ng-container matColumnDef="full_name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Full name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.name.firstName[0] + element.name.lastName[0]}} </td>
     </ng-container>
 
     <ng-container matColumnDef="email">

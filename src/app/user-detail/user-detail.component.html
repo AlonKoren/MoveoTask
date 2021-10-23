@@ -1,9 +1,27 @@
+
 <div *ngIf="user">
-  <h2>{{user.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{user.username}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="user.name" placeholder="Hero name"/>
-  </div>
+  <img src="{{user.picture.large}}" alt="picture" style="border-radius: 35%;">
+<!--  <h4>{{user.name.firstName +" " + user.name.lastName| uppercase}}</h4>-->
+  <br>
+  <br>
+  <div><span>Full Name: </span>{{user.name.firstName +" " + user.name.lastName}} ({{user.name.firstName[0] + user.name.lastName[0]}})</div>
+  <div><span>Age: </span>{{user.age}}</div>
+  <div><span>Email: </span><a href="mailto:{{user.email}}">{{user.email}}</a></div>
+
+  <div><span>Gender: </span>{{user.gender}}</div>
+  <div><span>Address: </span>{{address}}</div>
+  <br>
+  <google-map
+    height="250px"
+    width="100%"
+    [zoom]="zoom"
+    [center]="center"
+    [options]="options"
+  >
+    <map-marker [position]="center">
+    </map-marker>
+  </google-map>
+  <br>
+  <br>
   <button (click)="goBack()">go back</button>
 </div>

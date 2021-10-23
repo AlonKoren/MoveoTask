@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {User} from './user';
-import {Observable, of} from "rxjs";
+import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs/operators";
 
@@ -27,17 +27,26 @@ export class UserService {
              {
                let user:User ={
                  username: v.login.username,
-                 picture: v.picture.thumbnail,
-                 name: v.name.first[0] + v.name.last[0],
+                 name:{
+                   firstName:v.name.first,
+                   lastName:v.name.last
+                 },
                  email: v.email,
                  gender: v.gender,
                  age: v.dob.age,
                  location: {
+                   city: v.location.city,
+                   street: v.location.street.number + ` ` + v.location.street.name,
+                   state: v.location.state,
                    coordinates:{
                      latitude: v.location.coordinates.latitude,
                      longitude: v.location.coordinates.longitude
                    }
-                 }
+                 },
+                 picture: {
+                   large: v.picture.large,
+                   thumbnail: v.picture.thumbnail
+                 },
                }
                return user
              }

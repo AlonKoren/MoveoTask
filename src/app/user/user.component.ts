@@ -50,7 +50,6 @@ export class UserComponent implements OnInit {
   }
 
   announceSortChange(event: Sort) {
-    console.log(event)
-    this.userService.getUsers(this.pageNumber, this.resultCount).subscribe(users => this.users = users);
+    // this.userService.getUsers(this.pageNumber, this.resultCount).subscribe(users => this.users = users);
   }
 }
