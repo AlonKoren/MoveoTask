@@ -35,7 +35,7 @@
   </table>
 
   <mat-paginator [length]="(maxPage+1) * resultCount"
-                 pageSize="10"
+                 pageSize="{{resultCount}}"
                  (page)="onPageChange($event)"
                  aria-label="Select page of periodic elements">
   </mat-paginator>
